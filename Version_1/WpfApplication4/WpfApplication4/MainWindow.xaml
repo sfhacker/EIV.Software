@@ -1,0 +1,30 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication4"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="WpfApplication4.MainWindow"
+        mc:Ignorable="d"
+        Title="Personas / Sectores" Height="350" Width="525" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <telerik:RadListBox x:Name="lstSectoresDisponibles" SelectionMode="Multiple" HorizontalAlignment="Left" Height="218" Margin="10,41,0,0" VerticalAlignment="Top" Width="141"/>
+        <Label x:Name="label" Content="Sectores Disponibles" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Width="141"/>
+        <telerik:RadListBox x:Name="lstSectoresAsignados" SelectionMode="Multiple"  HorizontalAlignment="Left" Height="218" Margin="255,41,0,0" VerticalAlignment="Top" Width="140"/>
+        <Label x:Name="label1" Content="Sectores Asignados" FontWeight="Bold" HorizontalAlignment="Left" Margin="262,15,0,0" VerticalAlignment="Top" Width="140"/>
+        <telerik:RadButton x:Name="btnAdd" Content=" --> " HorizontalAlignment="Left" Margin="187,106,0,0" VerticalAlignment="Top"/>
+        <telerik:RadButton x:Name="btnRemove" Content="&lt;--" HorizontalAlignment="Left" Margin="187,147,0,0" VerticalAlignment="Top" Width="30"/>
+        <telerik:RadButton x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="434,41,0,0" VerticalAlignment="Top"/>
+        <telerik:RadButton x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" Margin="434,68,0,0" VerticalAlignment="Top" Width="49" />
+        <StatusBar HorizontalAlignment="Stretch" Height="47" VerticalAlignment="Bottom">
+            <StatusBarItem>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBlock x:Name="statusInfo" TextWrapping="WrapWithOverflow" 
+                           ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                           ScrollViewer.VerticalScrollBarVisibility="Auto"
+                           ScrollViewer.CanContentScroll="True" />
+                </ScrollViewer>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
